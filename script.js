@@ -11,21 +11,26 @@ const products = [
 
 // DOM elements
 const productList = document.getElementById("product-list");
+const addCart = document.getElementsByClass('add-to-cart-btn')
 
 // Render product list
 function renderProducts() {
   products.forEach((product) => {
     const li = document.createElement("li");
-    li.innerHTML = `${product.name} - $${product.price} <button class="add-to-cart-btn" data-id="${product.id}">Add to Cart</button>`;
+    li.innerHTML = `${product.name} - $${product.price} 
+	<button class="add-to-cart-btn" data-id="${product.id}">Add to Cart</button>`;
     productList.appendChild(li);
   });
 }
+
 
 // Render cart list
 function renderCart() {}
 
 // Add item to cart
-function addToCart(productId) {}
+function addToCart(productId) {
+	
+}
 
 // Remove item from cart
 function removeFromCart(productId) {}
